@@ -24,7 +24,7 @@ app.get('/', routeIndex)
 app.use('/products', routeProducts)
 app.get('/products/list', function (req, res) {
   var sqlite3 = require('sqlite3').verbose()
-  var db = new sqlite3.Database('database.sqlite')
+  var db = new sqlite3.Database('./data/database.sqlite')
 
   db.all('SELECT * FROM products', function (err, rows) {
     if (err) res.status(500).send('Error in selecting all products')

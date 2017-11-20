@@ -6,7 +6,7 @@ const router = express.Router()
 router.get('/view/:id', isAuth, function (req, res) {
   var id = req.params.id
   var sqlite3 = require('sqlite3').verbose()
-  let db = new sqlite3.Database('database.sqlite')
+  let db = new sqlite3.Database('./data/database.sqlite')
 
   db.get('SELECT * FROM products WHERE id = ' + id, function (err, row) {
     if (err) res.status(500).send('Error in selecting your product')
@@ -20,7 +20,7 @@ router.get('/view/:id', isAuth, function (req, res) {
 router.get('/cart/:id', isAuth, function (req, res) {
   var id = req.params.id
   var sqlite3 = require('sqlite3').verbose()
-  var db = new sqlite3.Database('database.sqlite')
+  var db = new sqlite3.Database('./data/database.sqlite')
 
   db.get('SELECT * FROM products WHERE id = ' + id, function (err, row) {
     if (err) res.status(500).send('Error in selecting your product')
