@@ -6,7 +6,7 @@ import bodyParser from 'body-parser'
 import http from 'http'
 
 import routeProducts from './routes/products'
-import routeIndex from './routes/index'
+import { routeIndex } from './routes/index'
 
 var express = require('express')
 var app = express()
