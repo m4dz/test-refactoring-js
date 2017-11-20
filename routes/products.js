@@ -9,6 +9,7 @@ router.get('/view/:id', isAuth, function (req, res) {
   let db = new sqlite3.Database('database.sqlite')
 
   db.get('SELECT * FROM products WHERE id = ' + id, function (err, row) {
+    if (err) res.status(500).send('Error in selecting your product')
     console.log(row)
     res.render('view', {product: row})
   })
@@ -22,6 +23,7 @@ router.get('/cart/:id', isAuth, function (req, res) {
   var db = new sqlite3.Database('database.sqlite')
 
   db.get('SELECT * FROM products WHERE id = ' + id, function (err, row) {
+    if (err) res.status(500).send('Error in selecting your product')
     console.log(row)
     res.json({success: true, text: 'Product ' + id + ' successfully bought'})
   })
