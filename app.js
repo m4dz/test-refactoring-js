@@ -18,7 +18,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.set('view engine', 'twig')
-app.use(express.static('views'))
+app.use(express.static('static'))
 
 app.get('/', routeIndex)
 app.use('/products', routeProducts)
