@@ -1,6 +1,6 @@
-var express = require('express')
 import { isAuth } from '../lib/middleware'
 
+var express = require('express')
 const router = express.Router()
 
 router.get('/view/:id', isAuth, function (req, res) {
