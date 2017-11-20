@@ -9,7 +9,8 @@
     "test": "mocha",
     "build": "gulp build",
     "dev": "gulp clean && gulp",
-    "clean": "gulp clean"
+    "clean": "gulp clean",
+    "lint": "standard"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -30,6 +31,7 @@
     "gulp-clean": "^0.3.2",
     "gulp-nodemon": "^2.2.1",
     "gulp-notify": "^3.0.0",
-    "request": "^2.81.0"
+    "request": "^2.81.0",
+    "standard": "^10.0.3"
   }
 }
