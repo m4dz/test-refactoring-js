@@ -4,8 +4,9 @@
   "description": "Refactoring of HTML/JS/CSS web application",
   "license": "MIT",
   "author": "CHANEL",
+  "main": "server.js",
   "scripts": {
-    "start": "node dist/app.js",
+    "start": "node dist/server.js",
     "test": "mocha",
     "build": "gulp build",
     "dev": "gulp clean && gulp",
