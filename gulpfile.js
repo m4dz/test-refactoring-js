@@ -6,7 +6,7 @@ var clean = require('gulp-clean')
 
 gulp.task('es6', () => {
   return gulp.src(['server.js', 'routes/*', 'lib/*', 'middleware/*'], {base: '.'})
-        .pipe(babel({presets: ['es2015']}))
+        .pipe(babel())
         .pipe(gulp.dest('dist'))
 })
 
