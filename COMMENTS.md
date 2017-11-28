@@ -1,7 +1,7 @@
 This file contains my comments about the refactoring if the given app.
 It explains my choices, doubts, and needs.
 
-It tooks me about 1,5 hours to get tis result.
+It tooks me about approx. 3 hours to get this result.
 
 
 # Cleaning the project
@@ -18,7 +18,9 @@ It tooks me about 1,5 hours to get tis result.
 
 # Templates
 
-1. use a layout
+1. Use a layout
+2. Remove boostrap deps
+3. Clean HTML views to make it more concise and standard compliant
 
 # Server
 
@@ -32,7 +34,8 @@ It tooks me about 1,5 hours to get tis result.
 There's many things to improve to get the code really clean and consistent. Here's some ideas:
 
 * Make tests useful, the current one isn't relevant
-* Refactor the views to make them accessibles and consistent with HTML standard
+* Use the available locales
 * Refactor the views to extract some commponents
+* Replace loose styles from bootstrap
 * Refactor CSS to keep it DRY
 * etc, the list isnt exhaustive
