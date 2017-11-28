@@ -11,6 +11,8 @@ const DB_PATH = path.resolve(__dirname, '../../data/database.sqlite')
 const router = express.Router()
 const dbPromise = sqlite.open(DB_PATH, { Promise })
 
+router.get('/', (req, res) => res.redirect(301, '/products/list'))
+
 router.get('/list', async (req, res, next) => {
   try {
     const db = await dbPromise
