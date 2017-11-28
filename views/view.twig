@@ -5,17 +5,15 @@
 {% endblock %}
 
 {% block body %}
-    <div class="row">
-        <div class="col-4">
-            <figure>
-                <img class="card-img-top" src="/img/{{ product.image }}" />
-                <figcaption>{{ product.name }}</figcaption>
-            </figure>
-        </div>
-        <div class="col-8">
-            <p>{{ product.description }}</p>
-            <p>Stock level: {{ product.stock }}</p>
-            <a class="btn btn-primary" href="/products/cart/{{ product.id }}">Buy</a>
-        </div>
+    <div>
+        <figure>
+            <img class="card-img-top" src="/img/{{ product.image }}" alt="{{ product.name }} visual" />
+            <figcaption>{{ product.name }}</figcaption>
+        </figure>
+    </div>
+    <div>
+        <p>{{ product.description }}</p>
+        <p>Stock level: {{ product.stock }}</p>
+        <a class="btn btn-primary" href="/products/cart/{{ product.id }}">Buy</a>
     </div>
 {% endblock %}
