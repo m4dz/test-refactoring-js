@@ -4,9 +4,6 @@ import logger from 'morgan'
 import express from 'express'
 import router from './routes'
 
-// import routeProducts from './routes/products'
-// import { routeIndex } from './routes/index'
-
 const app = express()
 const port = process.env.PORT || 3001
 
@@ -16,29 +13,3 @@ app.use(express.static('static'))
 app.use('/', router)
 
 app.listen(port, () => console.log(`Express server listening on port ${port} in ${app.settings.env} mode`))
-
-// app.get('/', routeIndex)
-// app.use('/products', routeProducts)
-// app.get('/products/list', function (req, res) {
-//   var sqlite3 = require('sqlite3').verbose()
-//   var db = new sqlite3.Database('./data/database.sqlite')
-
-//   db.all('SELECT * FROM products', function (err, rows) {
-//     if (err) res.status(500).send('Error in selecting all products')
-//     res.render('list', {products: rows})
-//   })
-
-//   db.close()
-// })
-
-// app.close = function () {
-//   server.close()
-// }
-
-// app.listen(() => {
-//   server.listen(port, () => {
-//     console.log('Express server listening on port ' + port + ' in ' + app.settings.env + ' mode')
-//   })
-// })
-
-// export default app
