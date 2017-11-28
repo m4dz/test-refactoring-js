@@ -1,7 +1,7 @@
 'use strict'
-// import { isAuth } from '../lib/middleware'
 
 import express from 'express'
+import { isAuth } from '../lib/middleware'
 
 const router = express.Router()
 
@@ -9,11 +9,11 @@ router.get('/list', (req, res) => {
   res.send('products list')
 })
 
-router.get('/view/:id', (req, res) => {
+router.get('/view/:id', isAuth, (req, res) => {
   res.send(`products view ${req.params.id}`)
 })
 
-router.get('/cart/:id', (req, res) => {
+router.get('/cart/:id', isAuth, (req, res) => {
   res.send(`products cart ${req.params.id}`)
 })
 
