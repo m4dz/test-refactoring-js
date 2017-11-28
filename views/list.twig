@@ -3,25 +3,18 @@
 {% block body %}
 	<ul class="listing">
 	{% for product in products %}
-		<li>
-			<div class="card">
+		<li class="card">
+			<a href="/products/view/{{ product.id }}" title="View more">
 				<figure>
-					<img class="card-img-top" src="/img/{{ product.image }}" alt="Alt text" />
+					<img class="card-img-top" src="/img/{{ product.image }}" alt="{{ product.name }} visual" />
 					<figcaption>{{ product.name }}</figcaption>
 				</figure>
 
 				<div class="card-body">
-					<span>
-						<h1 class="card-title">{{ product.name }}</h1>
-					</span>
-					<h6 class="card-text">{{ product.description }}</h6>
-					<a class="btn btn-primary" href="/products/view/{{ product.id }}" title="View more">
-						<button>
-							View More
-						</button>
-					</a>
+					<h2 class="card-title">{{ product.name }}</h2>
+					<p class="card-text">{{ product.description }}</p>
 				</div>
-			</div>
+			</a>
 		</li>
 	{% endfor %}
 	</ul>
