@@ -1,8 +1,6 @@
 'use strict'
 
 import logger from 'morgan'
-import cookieParser from 'cookie-parser'
-import bodyParser from 'body-parser'
 import express from 'express'
 
 // import routeProducts from './routes/products'
@@ -12,9 +10,6 @@ const app = express()
 const port = process.env.PORT || 3001
 
 app.use(logger('dev'))
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(cookieParser())
 app.set('view engine', 'twig')
 app.use(express.static('static'))
 
