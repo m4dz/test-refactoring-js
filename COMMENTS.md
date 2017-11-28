@@ -14,19 +14,25 @@ It tooks me about 1,5 hours to get tis result.
 # Structure
 
 1. Improve folders and files structure
+2. Migrate to babel-preset-env
 
 # Templates
 
 1. use a layout
 
+# Server
+
+1. Use a more concise syntax for express server
+2. Create consistent routers for modules paths
+3. Use a Promise-wise DB handler
+4. Move db logics outside of routing
+
 # TODO
 
 There's many things to improve to get the code really clean and consistent. Here's some ideas:
 
-* Refactor the views to make them accessibles and consistent with HTML standard
-* Refactor the vies to extract some commponents
-* Refactor CSS to keep it DRY
-* Refactor JS logic to isolate DB logic from the rest of the app
-* Use Promises
 * Make tests useful, the current one isn't relevant
+* Refactor the views to make them accessibles and consistent with HTML standard
+* Refactor the views to extract some commponents
+* Refactor CSS to keep it DRY
 * etc, the list isnt exhaustive
